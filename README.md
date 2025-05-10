@@ -1,115 +1,94 @@
-SMS Spam Detection
+# SMS Spam Detection Using TensorFlow
 
-Introduction
-This documentation outlines the SMS Spam Detection project, which centers on classifying text messages to distinguish spam from legitimate content. The project uses Python along with libraries such as NumPy, pandas, Matplotlib, Seaborn, TensorFlow, and Scikit-learn to implement and evaluate various machine learning models.
+## Introduction  
+This project focuses on detecting spam messages through text classification using machine learning. Built with Python and libraries such as TensorFlow, Scikit-learn, pandas, NumPy, Seaborn, and Matplotlib, the project explores various approaches to accurately classify SMS messages as spam or ham (non-spam).
 
+## Project Objective  
+The goal of this project is to implement and compare different machine learning models for spam detection. It aims to help users understand which models are most effective for text classification tasks involving short messages.
 
-Project Objective
-The goal is to build and compare multiple machine learning models tailored for text classification, with a focus on identifying spam messages. By assessing different algorithms, users can better understand their performance and select the best-suited model for their specific needs.
+## Key Features  
+- **Data Preprocessing**: Load and clean the SMS dataset for model training.  
+- **Data Visualization**: Analyze and visualize patterns in spam and ham messages.  
+- **Model Development**: Implement multiple models including:
+  - Naive Bayes  
+  - Neural Networks with custom word embeddings  
+  - Bidirectional LSTM  
+  - Transfer Learning with Universal Sentence Encoder  
+- **Model Evaluation**: Evaluate each model using standard metrics like Accuracy, Precision, Recall, and F1-score.  
+- **Model Comparison**: Visualize and compare the performance of all models.
 
+##  How to Use  
 
-Key Features
+###  Prerequisites  
+Make sure Python and the required libraries are installed. You can install dependencies using:
 
-Data Handling & Preprocessing: Load the dataset, clean the text, and prepare it for analysis.
+```bash
+pip install -r requirements.txt
+```
 
-Data Analysis & Visualization: Use charts and plots to explore and illustrate patterns in the data.
+###  Steps to Run  
+1. Clone the repository and navigate to the project folder.  
+2. Download the `spam.csv` dataset and place it in the appropriate directory.  
+3. Run the Jupyter notebook or Python scripts in order.  
+4. Review the performance metrics and plots to compare models.
 
-Model Development: Implement a range of models including Naive Bayes, custom neural networks, Bidirectional LSTM, and models using Transfer Learning.
+## Project Workflow  
 
-Model Evaluation: Measure performance using metrics such as accuracy, precision, recall, and F1-score.
+### 1️ Data Loading and Preprocessing  
+- Load `spam.csv` using pandas.  
+- Clean the dataset by removing unused columns, renaming fields, and encoding labels (spam = 1, ham = 0).
 
-Model Comparison: Analyze and compare results across models to determine the most effective approach.
+### 2️ Data Exploration and Visualization  
+- Visualize class distribution (spam vs. ham).  
+- Analyze message lengths and other text statistics.
 
+### 3️ Model Development  
+Build and train the following models:
+- **Naive Bayes**  
+- **Neural Network with custom embeddings**  
+- **Bidirectional LSTM**  
+- **Transfer Learning using Universal Sentence Encoder**
 
-How to Use the Project
+### 4️ Model Evaluation  
+Evaluate each model using:
+- Accuracy  
+- Precision  
+- Recall  
+- F1-Score  
+- Confusion Matrix  
+- Classification Report
 
-Ensure Python and all required libraries are installed.
+### 5️ Model Comparison  
+- Compare results visually using bar charts.  
+- Analyze trade-offs between precision and recall for each model.
 
-Download the source code and dataset (spam.csv).
+## Model Results Overview  
 
-Execute the code in sequence within a Python environment.
+###  Naive Bayes  
+- **Accuracy**: X%  
+- **Precision**: X%, **Recall**: X%, **F1-Score**: X%  
+- **Explanation**: A simple probabilistic model that works well for text classification, despite assuming feature independence.
 
-Review the outcomes and compare how each model performs.
+###  Neural Network with Custom Embeddings  
+- **Accuracy**: X%  
+- **Precision**: X%, **Recall**: X%, **F1-Score**: X%  
+- **Architecture**: Embedding layer → LSTM → Dropout → Dense layers  
+- **Explanation**: Learns word embeddings and sequence patterns but requires more training time.
 
-Detailed Workflow
+###  Bidirectional LSTM  
+- **Accuracy**: X%  
+- **Precision**: X%, **Recall**: X%, **F1-Score**: X%  
+- **Explanation**: Processes sequences in both directions to capture deeper context and improve classification performance.
 
-Loading and Preprocessing the Data:
+###  Transfer Learning (Universal Sentence Encoder)  
+- **Accuracy**: X%  
+- **Precision**: X%, **Recall**: X%, **F1-Score**: X%  
+- **Explanation**: Leverages pre-trained sentence embeddings to extract semantic meaning from text, enabling strong performance with fewer data.
 
-Import the dataset using pandas.
+## Model Performance Comparison  
+- **Accuracy Comparison**: Which model performs best overall.  
+- **Precision vs. Recall**: Trade-off analysis for each model.  
+- **F1-Score Analysis**: Combined metric for balanced evaluation.
 
-Clean the data by dropping unnecessary columns, renaming headers, and converting labels into numerical form.
-
-Exploring and Visualizing the Data:
-
-Use plots to analyze the distribution of spam vs. non-spam messages.
-
-Study message lengths and how they vary across message types.
-
-Building the Models:
-
-Naive Bayes
-
-Neural Network with custom word embeddings
-
-Bidirectional LSTM
-
-Transfer Learning using the Universal Sentence Encoder
-
-Evaluating the Models:
-
-Assess each model’s performance using key classification metrics.
-
-Generate confusion matrices and classification reports.
-
-Comparing Models:
-
-Evaluate model performance side-by-side based on accuracy, precision, recall, and F1-score.
-
-Use visual aids like bar graphs to illustrate the results.
-
-
-Model Insights
-
-Naive Bayes:
-
-Achieves an accuracy of X%, with precision, recall, and F1-score of X%.
-
-Uses word frequency to estimate the likelihood of spam.
-
-Assumes feature independence, which may not always be accurate but works well for simple text classification.
-
-Neural Networks with Custom Embeddings:
-
-Attains X% accuracy and corresponding precision, recall, and F1-score.
-
-Architecture includes embeddings, LSTM, dropout, and dense layers with ReLU activation.
-
-Captures word relationships and sequences more effectively than traditional models.
-
-Bidirectional LSTM:
-
-Achieves X% accuracy, along with respective precision, recall, and F1-score.
-
-Processes input in both forward and backward directions, enhancing context awareness.
-
-Particularly strong at learning long-term dependencies in sequential data.
-
-Transfer Learning with Universal Sentence Encoder:
-
-Records an accuracy of X% and relevant metric scores.
-
-Uses pre-trained embeddings that encapsulate the semantic meaning of entire sentences.
-
-Especially useful when working with smaller or specialized datasets.
-
-Performance Comparison
-
-Accuracy: Analyze which model is most accurate.
-
-Precision vs. Recall: Evaluate the balance between identifying spam and avoiding false positives.
-
-F1-score: Compare F1-scores to gauge overall effectiveness.
-
-
-Conclusion
-This project offers a complete pipeline for tackling SMS spam detection—from data preparation to model comparison. It serves as a hands-on guide for anyone interested in exploring text classification techniques and deploying spam filters using machine learning.
+## Conclusion  
+This SMS Spam Detection project offers a complete workflow for building, evaluating, and comparing machine learning models for text classification. It’s a valuable resource for understanding NLP workflows and deploying practical spam detection systems using modern ML techniques.
