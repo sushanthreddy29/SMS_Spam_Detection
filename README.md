@@ -1,13 +1,15 @@
-SMS Spam Detection
+SMS Spam Detection Using TensorFlow
 
-**Introduction:
-**This documentation outlines the SMS Spam Detection project, which centers on classifying text messages to distinguish spam from legitimate content. The project uses Python along with libraries such as NumPy, pandas, Matplotlib, Seaborn, TensorFlow, and Scikit-learn to implement and evaluate various machine learning models.
+Introduction
+This documentation outlines the SMS Spam Detection project, which centers on classifying text messages to distinguish spam from legitimate content. The project uses Python along with libraries such as NumPy, pandas, Matplotlib, Seaborn, TensorFlow, and Scikit-learn to implement and evaluate various machine learning models.
 
-**Project Objective:
-**The goal is to build and compare multiple machine learning models tailored for text classification, with a focus on identifying spam messages. By assessing different algorithms, users can better understand their performance and select the best-suited model for their specific needs.
 
-**Key Features:
-**
+Project Objective
+The goal is to build and compare multiple machine learning models tailored for text classification, with a focus on identifying spam messages. By assessing different algorithms, users can better understand their performance and select the best-suited model for their specific needs.
+
+
+Key Features
+
 Data Handling & Preprocessing: Load the dataset, clean the text, and prepare it for analysis.
 
 Data Analysis & Visualization: Use charts and plots to explore and illustrate patterns in the data.
@@ -18,8 +20,9 @@ Model Evaluation: Measure performance using metrics such as accuracy, precision,
 
 Model Comparison: Analyze and compare results across models to determine the most effective approach.
 
-**How to Use the Project:
-**
+
+How to Use the Project
+
 Ensure Python and all required libraries are installed.
 
 Download the source code and dataset (spam.csv).
@@ -28,7 +31,7 @@ Execute the code in sequence within a Python environment.
 
 Review the outcomes and compare how each model performs.
 
-Detailed Workflow:
+Detailed Workflow
 
 Loading and Preprocessing the Data:
 
@@ -64,8 +67,9 @@ Evaluate model performance side-by-side based on accuracy, precision, recall, an
 
 Use visual aids like bar graphs to illustrate the results.
 
-**Model Insights:
-**
+
+Model Insights
+
 Naive Bayes:
 
 Achieves an accuracy of X%, with precision, recall, and F1-score of X%.
@@ -106,5 +110,6 @@ Precision vs. Recall: Evaluate the balance between identifying spam and avoiding
 
 F1-score: Compare F1-scores to gauge overall effectiveness.
 
-**Conclusion:
-**This project offers a complete pipeline for tackling SMS spam detection—from data preparation to model comparison. It serves as a hands-on guide for anyone interested in exploring text classification techniques and deploying spam filters using machine learning.
+
+Conclusion
+This project offers a complete pipeline for tackling SMS spam detection—from data preparation to model comparison. It serves as a hands-on guide for anyone interested in exploring text classification techniques and deploying spam filters using machine learning.
